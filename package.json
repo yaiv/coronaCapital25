@@ -1,0 +1,34 @@
+{
+  "name": "coronacapital25",
+  "version": "1.0.0",
+  "description": "Pagina Corona Capital 2025",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:build/css",
+    "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaiv/coronaCapital25.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "author": "Yair Guerra @github.com/yaiv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaiv/coronaCapital25/issues"
+  },
+  "homepage": "https://github.com/yaiv/coronaCapital25#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.86.3"
+  },
+  "dependencies": {
+    "coronacapital25": "file:"
+  }
+}
