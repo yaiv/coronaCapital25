@@ -472,4 +472,39 @@ h1:hover {
   font-weight: 700;
   font-size: 3rem;
   margin: 0;
+}
+
+.festival {
+  padding: 3rem;
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+}
+
+.texto-imagen {
+  position: static;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .texto-imagen {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .imagen {
+    padding: 0;
+  }
+  .imagen img {
+    object-fit: contain;
+    height: auto;
+  }
 }/*# sourceMappingURL=app.css.map */
