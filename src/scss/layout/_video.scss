@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+
+.video {
+    position: relative; // se pueden usar propiedades top, left, right o bottom por se relativa 
+    min-height: 50rem; //Se establece altura minima 
+    max-height: 70rem; //Se establece altura maxima 
+    overflow: hidden; //Esconde el contenido que exceda el tamaño del contenedor definido 
+
+    .overlay{
+        position:absolute; //Se pega a header 
+        background: linear-gradient(
+            270deg,
+            rgba(v.$grisR, 0.8),
+            rgba( color.adjust(v.$grisR, $lightness: -20%), .4)   /*Nueva sintaxis*/
+            );
+            inset: 0;
+            display: flex;
+            align-items: center;
+    }
+    video { //Se ajusta el ancho 
+        display: block;
+        width: auto; //para pantallas pequeñas
+        @include m.desktop{
+            width: 100%;
+        }
+    }
+}
+
+.contenido-video{
+    z-index: 10; //profundiad de elemento
+    h2, h3, p{
+        text-align:justify;
+        color: v.$blanco;
+        font-family: v.$fuente_principal;
+        font-size: 7rem;
+        margin: 0;
+    }
+    h3{
+        font-size: 5rem;
+
+    }
+    p{
+        background-color: v.$rosa;
+        display: inline;
+        padding: 1rem, 2rem;
+        font-weight: 700;
+        font-size: 3rem;
+        margin: 0;
+    }
+}
