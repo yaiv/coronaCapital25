@@ -2,100 +2,35 @@
 @use 'base/mixins' as m;
 
 
-// .festival {
-//   background-image: url(../../src/img/background.png); // Integra tu imagen aquí
-//   background-size: cover; // Asegura que cubra toda el área
-//   background-repeat: no-repeat; // Evita que se repita
-//   background-position: center; // Centra la imagen
-//   padding: 5rem; // Añade espacio interno para que el texto no esté pegado
-//   color: v.$rosa; // Cambia el color del texto para que sea legible sobre el fondo
-// }
-
-// .contenido-festival {
-//   text-align: center; // Centra el texto
-//   max-width: 800px; // Limita el ancho del texto
-//   margin: 0 auto; // Centra el contenido en el contenedor
-// }
-
-
-// .festival {
-//     background-color: v.$naranja; // Fondo principal de la sección
-//     padding: 5rem; // Espacio interno para diseño
-//     color: black; // Asegura que el texto sea blanco
-//     h2 {
-//         font-size: 3rem; // Tamaño del título ajustado
-//         margin-bottom: 1rem; // Espaciado entre el título y párrafo
-//       }
-//   }
-  
-//   .sobre-festival {
-//     @include m.contenedor;
-//     @include m.tablet {
-//       @include m.grid(2); // Estructura responsive en dos columnas
-//     }
-//   }
-  
-//   .imagen {
-//     position: relative; // Permite superponer el texto sobre la imagen
-//     background-color: v.$naranja; // Fondo detrás de la imagen
-//     overflow: hidden; // Evita desbordamiento
-//     img {
-//       width: 100%; // Imagen ocupa el ancho completo
-//       height: auto; // Mantiene proporciones originales
-//       display: block; // Elimina el espacio debajo de la imagen
-//     }
-//   }
-  
-//   .texto-imagen {
-//     position: absolute; // Coloca el texto encima de la imagen
-//     top: 50%; // Centra verticalmente el texto
-//     left: 50%; // Centra horizontalmente el texto
-//     transform: translate(-50%, -50%); // Asegura que el texto esté perfectamente centrado
-//     text-align: center; // Centra el texto
-//     color: black; // Texto blanco para resaltar
-
-//     p {
-//       font-size: 1rem; // Tamaño del texto del párrafo
-//     }
-//   }
-
-
-.festival {
-    padding: 3rem; // Reduce el padding en pantallas pequeñas
-  }
-  
-  .imagen {
-    img {
-      width: 100%; // Mantiene la imagen a tamaño completo
-      height: auto; // Ajusta la altura según proporción
+.bg-festival {
+  background-color: v.$naranja;
+  margin-top: 3rem;
     }
-  }
-  
-  .texto-imagen {
-    position: static; // Cambia el posicionamiento absoluto en móviles
-    margin-top: 1rem; // Añade espacio entre la imagen y el texto
-    text-align: center; // Mantiene el texto centrado
-  }
-  
-  @media (max-width: 768px) { // Para pantallas pequeñas
-    .texto-imagen {
-      font-size: 1rem; // Reduce el tamaño del texto
-      padding: 1rem; // Espacio interno para evitar desbordamientos
-    }
-  
-    h2 {
-      font-size: 1.5rem; // Ajusta el tamaño del título
-    }
-  
-    p {
-      font-size: 1rem; // Ajusta el tamaño del párrafo
-    }
-  
-    .imagen {
-      padding: 0; // Elimina espacios para optimizar el diseño
-      img {
-        object-fit: contain; // Asegura que la imagen se ajuste dentro del contenedor
-        height: auto; // Ajusta automáticamente la proporción
+
+    .sobre-festival {
+      margin-top: 1rem;
+
+      @include m.contenedor;
+      @include m.tablet {
+          @include m.grid(2);
       }
-    }
+      .imagen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        
+      }
+  }
+  
+  .contenido-festival {
+      h2 {
+          color: v.$blanco;
+          margin-bottom: 2rem;
+          font-weight: 700;
+      }
+      p{
+        font-weight: 600;
+        color: v.$amarillo;
+      }
   }

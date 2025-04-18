@@ -320,6 +320,7 @@ html {
 }
 
 body {
+  background-color: #00CFFF;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -474,37 +475,127 @@ h1:hover {
   margin: 0;
 }
 
-.festival {
-  padding: 3rem;
+.bg-festival {
+  background-color: #fb7821;
+  margin-top: 3rem;
 }
 
-.imagen img {
-  width: 100%;
+.sobre-festival {
+  margin-top: 1rem;
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.sobre-festival .imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: auto;
 }
 
-.texto-imagen {
-  position: static;
-  margin-top: 1rem;
-  text-align: center;
+.contenido-festival h2 {
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.contenido-festival p {
+  font-weight: 600;
+  color: #FFD600;
 }
 
-@media (max-width: 768px) {
-  .texto-imagen {
+.lineup {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 4rem 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.lineup h3 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #FFD600;
+  font-family: "Poetsen One", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.lineup .dia {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00CFFF;
+  margin: 3rem 0 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #00CFFF;
+  padding-bottom: 0.5rem;
+}
+.lineup .escenarios-contenedor {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .lineup .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+.lineup .escenarios-contenedor .escenario {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+}
+.lineup .escenarios-contenedor .escenario:hover {
+  transform: translateY(-5px);
+}
+.lineup .escenarios-contenedor .escenario.indie {
+  border-left: 6px solid #FF007F;
+}
+.lineup .escenarios-contenedor .escenario.mainstage {
+  border-left: 6px solid #39D98A;
+}
+.lineup .escenarios-contenedor .escenario .nombre-escenario {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 1rem;
+  color: #FFD600;
+  text-align: center;
+  text-transform: uppercase;
+}
+.lineup .escenarios-contenedor .escenario .calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lineup .escenarios-contenedor .escenario .calendario li {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+.lineup .escenarios-contenedor .escenario .calendario li span {
+  font-weight: bold;
+  color: #39D98A;
+}
+@media (min-width: 480px) {
+  .lineup .dia {
+    font-size: 1.6rem;
+  }
+  .lineup .escenario .nombre-escenario {
+    font-size: 1.4rem;
+  }
+  .lineup .escenario .calendario li {
     font-size: 1rem;
-    padding: 1rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-  .imagen {
-    padding: 0;
-  }
-  .imagen img {
-    object-fit: contain;
-    height: auto;
   }
 }/*# sourceMappingURL=app.css.map */
