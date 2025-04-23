@@ -511,8 +511,9 @@ h1:hover {
 }
 
 .lineup {
-  background-color: #000000;
-  color: #FFFFFF;
+  margin-top: 3rem;
+  background-color: #FF007F;
+  color: #000000;
   padding: 4rem 2rem;
   font-family: "Montserrat", sans-serif;
 }
@@ -578,19 +579,20 @@ h1:hover {
   list-style: none;
 }
 .lineup .escenarios-contenedor .escenario .calendario li {
-  font-size: 1.3rem;
+  font-size: 2rem;
+  font-weight: 700;
   padding: 1rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
 }
 .lineup .escenarios-contenedor .escenario .calendario li span {
-  font-weight: bold;
+  font-weight: 900;
   color: #39D98A;
 }
 @media (min-width: 480px) {
   .lineup .dia {
-    font-size: 1.6rem;
+    font-size: 2.3rem;
   }
   .lineup .escenario .nombre-escenario {
     font-size: 1.4rem;

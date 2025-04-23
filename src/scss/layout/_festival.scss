@@ -9,7 +9,6 @@
 
     .sobre-festival {
       margin-top: 1rem;
-
       @include m.contenedor;
       @include m.tablet {
           @include m.grid(2);

@@ -4,8 +4,9 @@
 
 
 .lineup {
-  background-color: v.$negro;
-  color: v.$blanco;
+  margin-top: 3rem;
+  background-color: v.$rosa;
+  color: v.$negro;
   padding: 4rem 2rem;
   font-family: v.$fuente_principal;
 
@@ -70,14 +71,15 @@
         @include m.resetear-lista;
 
         li {
-          font-size: 1.3rem;
+          font-size: 2rem;
+          font-weight: 700;
           padding: 1rem 0;
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
           display: flex;
           justify-content: space-between;
 
           span {
-            font-weight: bold;
+            font-weight: 900;
             color: v.$verde;
           }
         }
@@ -87,7 +89,7 @@
 
   @include m.telefono {
     .dia {
-      font-size: 1.6rem;
+      font-size: 2.3rem;
     }
 
     .escenario {
