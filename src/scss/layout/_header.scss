@@ -1,0 +1,55 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    background-color: v.$azul;
+}
+
+.contenido-header{
+    padding: 1.5rem;
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+}
+
+h1{
+    font-family: v.$fuente_titulo;
+    color: v.$amarillo;
+    text-align: center;
+    &:hover{
+        color: v.$naranja;
+    }
+
+    
+    @include m.tablet {
+        text-align: left;
+        margin: 0;
+    }
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column; //se habilita flex y se coloca en columnas verticales 
+    align-items: center; // se centran 
+    gap: 1.5rem; //se separan 
+    //Se le integra mixin tablet para que sea responsivo 
+    @include m.tablet{
+        flex-direction: row; //se coloca en fila siempre que sea superior a medidas de tablet 
+    }
+
+    a{
+        color: v.$rosa;
+        font-size: 2.5rem;
+        font-family: v.$fuente_navegacion;
+        text-decoration: none;
+        transition: color 0.3s ease; //suaviza cambio color 
+
+        &:hover{
+            color: v.$amarillo;
+        }
+        
+    }
+
+}

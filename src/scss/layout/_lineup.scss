@@ -1,0 +1,105 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+
+.lineup {
+  margin-top: 3rem;
+  background-color: v.$rosa;
+  color: v.$negro;
+  padding: 4rem 2rem;
+  font-family: v.$fuente_principal;
+
+  h3 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: v.$amarillo;
+    font-family: v.$fuente_titulo;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .dia {
+    font-size: 2rem;
+    font-weight: bold;
+    color: v.$azul;
+    margin: 3rem 0 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid v.$azul;
+    padding-bottom: 0.5rem;
+  }
+
+  .escenarios-contenedor {
+    @include m.grid(1, 3rem);
+
+    @include m.tablet {
+      @include m.grid(2, 4rem);
+    }
+
+    .escenario {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      &.indie {
+        border-left: 6px solid v.$rosa;
+      }
+
+      &.mainstage {
+        border-left: 6px solid v.$verde;
+      }
+
+      .nombre-escenario {
+        font-size: 1.8rem;
+        font-weight: 700;
+        font-family: v.$fuente_navegacion;
+        margin-bottom: 1rem;
+        color: v.$amarillo;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .calendario {
+        @include m.resetear-lista;
+
+        li {
+          font-size: 2rem;
+          font-weight: 700;
+          padding: 1rem 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          display: flex;
+          justify-content: space-between;
+
+          span {
+            font-weight: 900;
+            color: v.$verde;
+          }
+        }
+      }
+    }
+  }
+
+  @include m.telefono {
+    .dia {
+      font-size: 2.3rem;
+    }
+
+    .escenario {
+      .nombre-escenario {
+        font-size: 1.4rem;
+      }
+
+      .calendario li {
+        font-size: 1rem;
+      }
+    }
+  }
+}

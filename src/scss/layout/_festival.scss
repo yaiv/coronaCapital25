@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.bg-festival {
+  background-color: v.$naranja;
+  margin-top: 3rem;
+    }
+
+    .sobre-festival {
+      margin-top: 1rem;
+      @include m.contenedor;
+      @include m.tablet {
+          @include m.grid(2);
+      }
+      .imagen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        
+      }
+  }
+  
+  .contenido-festival {
+      h2 {
+          color: v.$blanco;
+          margin-bottom: 2rem;
+          font-weight: 700;
+      }
+      p{
+        font-weight: 600;
+        color: v.$amarillo;
+      }
+  }
