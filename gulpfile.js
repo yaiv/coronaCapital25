@@ -5,6 +5,7 @@ import gulpSass from 'gulp-sass'
 
 const sass = gulpSass(dartSass)
 
+//Genera copia de archivo y lo deja listo para llamar desde build
 export function js( done ) {
     src('src/js/app.js')
         .pipe( dest('build/js') ) 
