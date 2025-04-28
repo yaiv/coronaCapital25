@@ -381,6 +381,15 @@ body > section {
 .header {
   background-color: #00CFFF;
 }
+@media (min-width: 768px) {
+  .header.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0.1rem 0.2rem 0.3rem #333;
+  }
+}
 
 .contenido-header {
   padding: 1.5rem;
@@ -426,7 +435,7 @@ h1:hover {
   text-decoration: none;
   transition: color 0.3s ease;
 }
-.navegacion-principal a:hover {
+.navegacion-principal a:hover, .navegacion-principal a.active {
   color: #FFD600;
 }
 
@@ -477,7 +486,6 @@ h1:hover {
 
 .bg-festival {
   background-color: #fb7821;
-  margin-top: 3rem;
 }
 
 .sobre-festival {
@@ -511,7 +519,6 @@ h1:hover {
 }
 
 .lineup {
-  margin-top: 3rem;
   background-color: #FF007F;
   color: #000000;
   padding: 4rem 2rem;
@@ -638,6 +645,50 @@ h1:hover {
   object-fit: cover;
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: grid;
+  place-items: center;
+  animation: fadeIn ease-in 0.5s;
+}
+.modal.fade-out {
+  animation: fadeOut ease-in 0.9s;
+}
+.modal img {
+  max-width: 100rem;
+}
+
+.btn-cerrar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .contenedor-boletos {
   background-color: #fb7821;
 }
@@ -717,4 +768,54 @@ h1:hover {
 .pase .texto-boletos {
   font-weight: 700;
   color: #39D98A;
+}
+
+.bg-festival__mapa {
+  background-color: #00CFFF;
+  margin-top: 3rem;
+}
+
+.sobre-festival {
+  margin-top: 1rem;
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.sobre-festival .imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.contenido-festival h2 {
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.contenido-festival p {
+  font-weight: 600;
+  color: #FFD600;
+}
+
+.fecha {
+  color: #fb7821;
+}
+
+.escenarios-style {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+.escenarios-style span {
+  color: #fb7821;
+  font-weight: 800;
+  font-size: larger;
 }/*# sourceMappingURL=app.css.map */
