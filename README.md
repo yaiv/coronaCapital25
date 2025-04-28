@@ -54,16 +54,13 @@ src/ │ ├── img/
 
 ## 📸 Vista previa del proyecto
 
-![Vista previa de la página Corona Capital 2025](./cc_github.png)
-
-
-# 🎶 Corona Capital 2025 - Lineup Web Page
+![Vista previa de la página Corona Capital 2025](./cc_github.PNG)
 
 
 
-## 📸 Vista previa del proyecto 2
+## 📸 Vista previa del proyecto 
 
-![Vista previa de la página Corona Capital 2025](./cc_github2.png)
+![Vista previa de la página Corona Capital 2025](./cc_github2.PNG)
 
 
 ## ✨ Autor
