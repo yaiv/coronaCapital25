@@ -18,7 +18,7 @@ body {
     color: v.$negro;
     font-size: 2rem;
 
-    &.overflow-hidden {
+    &.overflow-hidden { //sirve para el scroll
         overflow: hidden;
     }
 }

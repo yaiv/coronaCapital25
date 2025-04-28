@@ -2,8 +2,9 @@
 @use 'base/mixins' as m;
 
 
-.bg-festival{
-  background-color: v.$naranja;
+.bg-festival__mapa {
+  background-color: v.$azul;
+  margin-top: 3rem;
     }
 
     .sobre-festival {
@@ -26,9 +27,25 @@
           color: v.$blanco;
           margin-bottom: 2rem;
           font-weight: 700;
+         text-align: center;
       }
       p{
         font-weight: 600;
         color: v.$amarillo;
       }
+  }
+
+  .fecha{
+    color: v.$naranja;
+  }
+
+  .escenarios-style{
+    color: v.$blanco;
+    font-weight: 500;
+
+    & span{
+        color: v.$naranja;
+        font-weight: 800;
+        font-size:larger;
+    }
   }
